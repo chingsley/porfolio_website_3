@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import './css/App.css';
-import { AppHeader, ScrollToTop } from './components';
+import { AppFooter, AppHeader, ScrollToTop } from './components';
 import UseScrollTop from './hooks/useScrollToTop';
 
 const AboutMe = lazy(() => import('./pages/AboutMe'));
@@ -14,7 +14,7 @@ const ProjectSingle = lazy(() => import('./pages/ProjectSingle'));
 function App() {
   return (
     <AnimatePresence>
-      <div className="bg-secondary-light dark:bg-primary-dark transition duration-300">
+      <div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
         <Router>
           <ScrollToTop />
           <AppHeader />
@@ -27,6 +27,7 @@ function App() {
               <Route path="contact" element={<Contact />} />
             </Routes>
           </Suspense>
+          <AppFooter />
         </Router>
         <UseScrollTop />
       </div>
