@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Button = () => {
+interface ButtonProps {
+  title: string;
+};
+
+const Button: React.FC<ButtonProps> = ({ title }) => {
   return (
-    <div>Button</div>
+    <div>{title}</div>
   );
 };
 
