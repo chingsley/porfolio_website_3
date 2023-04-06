@@ -10,9 +10,11 @@ module.exports = {
 				'secondary-light': '#FFFFFF',
 				'ternary-light': '#f6f7f8',
 
-				'primary-dark': '#0D2438',
+				// 'primary-dark': '#0D2438',
+				'primary-dark': '#161b22',
 				'secondary-dark': '#102D44',
-				'ternary-dark': '#1E3851',
+				// 'ternary-dark': '#1E3851',
+				'ternary-dark': '#0D2438',
 			},
 			container: {
 				padding: {
