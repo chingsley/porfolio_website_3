@@ -1,4 +1,4 @@
-import { useState, createContext, Dispatch, SetStateAction } from 'react';
+import { useState, createContext, Dispatch, SetStateAction, useContext } from 'react';
 import { projects as myProjects } from '../data';
 import { IProject } from '../data/projects';
 
@@ -55,6 +55,10 @@ const ProjectsProvider = (props: { children: React.ReactNode; }) => {
       {props.children};
     </ProjectsContext.Provider>
   );
+};
+
+export const useProjectsContext = () => {
+  return useContext(ProjectsContext);
 };
 
 export default ProjectsProvider;
