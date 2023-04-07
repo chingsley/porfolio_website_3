@@ -26,3 +26,5 @@ export { default as AppHeader } from './shared/AppHeader';
 export { default as BackToTop } from './BackToTop';
 export { default as HireMeModal } from './HireMeModal';
 export { default as ScrollToTop } from './ScrollToTop';
+
+export { default as BackgroundAnimation } from './backgroundAnimation/BackgroundAnimation';
