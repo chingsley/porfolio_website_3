@@ -12,7 +12,7 @@ interface IProjectsContext {
   setSelectedProject: Dispatch<SetStateAction<string>>;
   selectProjectsByCategory: IProject[];
 }
-export const ProjectsContext = createContext<IProjectsContext | null>(null);
+const ProjectsContext = createContext<IProjectsContext | null>(null);
 
 const ProjectsProvider = (props: { children: React.ReactNode; }) => {
   const [projects, setProjects] = useState(myProjects);
