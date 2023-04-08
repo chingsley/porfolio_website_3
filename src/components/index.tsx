@@ -13,7 +13,7 @@ export { default as ProjectInfo } from './projects/ProjectInfo';
 export { default as ProjectRelatedProjects } from './projects/ProjectRelatedProjects';
 export { default as ProjectsFilter } from './projects/ProjectsFilter';
 export { default as ProjectsGrid } from './projects/ProjectsGrid';
-export { default as ProjectSingle } from './projects/ProjectSingle';
+export { default as ProjectSingle } from './projects/ProjectCard';
 
 export { default as Button } from './reusable/Button';
 export { default as FormInput } from './reusable/FormInput';
