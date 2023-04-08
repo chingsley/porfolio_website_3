@@ -28,3 +28,5 @@ export { default as HireMeModal } from './HireMeModal';
 export { default as ScrollToTop } from './ScrollToTop';
 
 export { default as BackgroundAnimation } from './backgroundAnimation/BackgroundAnimation';
+
+export { default as ViewTypeSwitcher } from './viewTypeSwitcher/ViewTypeSwitcher';
