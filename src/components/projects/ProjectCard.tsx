@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { IProject } from '../../data/projects';
 
-interface ProjectSingleProps extends IProject { };
+interface ProjectCardProps extends IProject { };
 
-const ProjectSingle: React.FC<ProjectSingleProps> = (props) => {
+const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   const { id, title, category, img: image } = props;
 
   return (
@@ -41,4 +41,4 @@ const ProjectSingle: React.FC<ProjectSingleProps> = (props) => {
   );
 };
 
-export default ProjectSingle;
+export default ProjectCard;
