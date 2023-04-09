@@ -1,5 +1,5 @@
 import { FiSearch } from 'react-icons/fi';
-import { ProjectsFilter, ProjectsGrid, ViewTypeSwitcher } from "../components";
+import { ProjectsFilter, ProjectsGrid, ProjectsList, ViewTypeSwitcher } from "../components";
 import { useProjectsContext } from "../context/ProjectsContext";
 import { useState } from 'react';
 
@@ -34,17 +34,6 @@ const Projects = () => {
         </div>
 
         <div className="mt-10 sm:mt-16">
-          <h3
-            className="font-general-regular 
-                        text-center text-secondary-dark
-                        dark:text-ternary-light
-                        text-md
-                        sm:text-xl
-                        mb-3
-                        "
-          >
-            Search projects by title or filter by category
-          </h3>
           <div
             className="
                         flex
@@ -80,7 +69,8 @@ const Projects = () => {
           </div>
         </div>
 
-        <ProjectsGrid />
+        {/* <ProjectsGrid projects={projects} /> */}
+        <ProjectsList projects={projects} />
       </section>
     </div>
   );

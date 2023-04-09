@@ -13,6 +13,7 @@ export interface IProject {
   category: string;
   img: string;
   projectHeader?: IProjectHeader;
+  description: string;
 }
 
 interface IProjectHeader {
@@ -27,6 +28,7 @@ const projects: IProject[] = [
     title: 'Google Health Platform',
     category: 'Web Application',
     img: WebImage2,
+    description: 'Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic',
     projectHeader: {
       title: 'Project Management UI - From Context',
       publishDate: 'Jul 26, 2021',
@@ -38,30 +40,35 @@ const projects: IProject[] = [
     title: 'Phoenix Digital Agency',
     category: 'Mobile Application',
     img: MobileImage2,
+    description: 'Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic',
   },
   {
     id: 3,
     title: 'Project Management UI',
     category: 'UI/UX Design',
     img: UIImage1,
+    description: 'Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic',
   },
   {
     id: 4,
     title: 'Cloud Storage Platform',
     category: 'UI/UX Design',
     img: UIImage2,
+    description: 'Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic',
   },
   {
     id: 5,
     title: 'React Social App',
     category: 'Mobile Application',
     img: MobileImage1,
+    description: 'Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic',
   },
   {
     id: 6,
     title: 'Apple Design System',
     category: 'Web Application',
     img: WebImage1,
+    description: 'Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic',
   },
 ];
 

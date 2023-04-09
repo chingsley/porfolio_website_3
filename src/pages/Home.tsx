@@ -4,11 +4,16 @@ import { useProjectsContext } from "../context/ProjectsContext";
 
 
 const Home = () => {
+  const projectsContext = useProjectsContext()!;
+  if (!projectsContext) {
+    return <div>Loading...</div>;
+  }
+  const { projects } = projectsContext;
 
   return (
     <div className="container mx-auto">
       <AppBanner />
-      <ProjectsGrid />
+      <ProjectsGrid projects={projects} />
 
       <div className="mt-8 sm:mt-10 flex justify-center">
         <Link

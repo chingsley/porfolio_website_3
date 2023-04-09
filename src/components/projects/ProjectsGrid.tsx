@@ -1,29 +1,14 @@
-import { FiSearch } from 'react-icons/fi';
-import { useProjectsContext } from '../../context/ProjectsContext';
-import ProjectSingle from './ProjectCard';
-import ProjectsFilter from './ProjectsFilter';
+import { IProject } from '../../data/projects';
+import ProjectCard from './ProjectCard';
 
-const ProjectsGrid = () => {
-  const projectsContext = useProjectsContext()!;
-  console.log(projectsContext);
-  if (!projectsContext) {
-    return <div>Loading...</div>;
-  }
-  const {
-    projects,
-    setProjects,
-    searchString,
-    setSearchString,
-    searchProjectsByTitle,
-    selectedProject,
-    setSelectedProject,
-    selectProjectsByCategory,
-  } = projectsContext;
-
+interface IProjectsGridProps {
+  projects: IProject[];
+}
+const ProjectsGrid: React.FC<IProjectsGridProps> = ({ projects }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
       {projects.map((project) => (
-        <ProjectSingle
+        <ProjectCard
           {...project}
           key={project.id}
         />
