@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import Img from '../img/Img';
 import { IProject } from '../../data/projects';
 import Button from '../reusable/Button';
@@ -10,11 +11,21 @@ interface IProjectsLIstProps {
 }
 const ProjectsList: React.FC<IProjectsLIstProps> = ({ projects }) => {
   return (
+    // <Wrapper className="grid row-gap-3 mt-6">
     <Wrapper className="grid row-gap-3 mt-6">
       {projects.map((project) => {
         const { id, title, description, img: image } = project;
         return (
-          <article key={id}>
+          <motion.article
+            key={id}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, }}
+            transition={{
+              ease: 'easeInOut',
+              duration: 0.7,
+              delay: 0.15,
+            }}
+          >
             <Img src={image} alt={title} />
             <div className="font-general-medium text-ternary-dark dark:text-ternary-light mb-2">
               <h4 className='text-lg md:text-lg'>{title}</h4>
@@ -38,7 +49,7 @@ const ProjectsList: React.FC<IProjectsLIstProps> = ({ projects }) => {
                 </div>
               </div>
             </div>
-          </article>
+          </motion.article>
         );
       })}
     </Wrapper>

@@ -1,27 +1,29 @@
 import { FiSearch } from 'react-icons/fi';
 import { ProjectsFilter, ProjectsGrid, ProjectsList, ViewTypeSwitcher } from "../components";
 import { useProjectsContext } from "../context/ProjectsContext";
-import { useState } from 'react';
+import { useSettingsContext } from '../context/SettingsContext';
 
 
 const Projects = () => {
-  const [viewType, setViewType] = useState('Grid');
+  const projectsContext = useProjectsContext();
+  const settingsContext = useSettingsContext();
 
-  const projectsContext = useProjectsContext()!;
   console.log(projectsContext);
-  if (!projectsContext) {
-    return <div>Loading...</div>;
-  }
+  if (!projectsContext) return <div>Loading...</div>;
+  if (!settingsContext) return <div>Loading...</div>;
+
   const {
     projects,
-    setProjects,
-    searchString,
+    // setProjects,
+    // searchString,
     setSearchString,
-    searchProjectsByTitle,
-    selectedProject,
-    setSelectedProject,
-    selectProjectsByCategory,
+    // searchProjectsByTitle,
+    // selectedProject,
+    // setSelectedProject,
+    // selectProjectsByCategory,
   } = projectsContext;
+
+  const { viewType } = settingsContext;
 
   return (
     <div className="container mx-auto">
@@ -69,8 +71,7 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* <ProjectsGrid projects={projects} /> */}
-        <ProjectsList projects={projects} />
+        {viewType === 'grid' ? <ProjectsGrid projects={projects} /> : <ProjectsList projects={projects} />}
       </section>
     </div>
   );
