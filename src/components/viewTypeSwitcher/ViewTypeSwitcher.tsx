@@ -13,13 +13,13 @@ const ViewTypeSwitcher = () => {
     <Wrapper>
       <button
         onClick={() => setViewType('grid')}
-        className={`${viewType === 'grid' ? dClass + 'active' : dClass}`}
+        className={`${viewType === 'grid' ? dClass + ' active' : dClass}`}
       >
         <BsFillGridFill className="text-ternary-dark dark:text-ternary-light w-5 h-5" />
       </button>
       <button
         onClick={() => setViewType('list')}
-        className={`${viewType === 'list' ? dClass + 'active' : dClass}`}
+        className={`${viewType === 'list' ? dClass + ' active' : dClass}`}
       >
         <BsList className="text-ternary-dark dark:text-ternary-light w-5 h-5" />
       </button>
@@ -32,10 +32,10 @@ const Wrapper = styled.div`
     grid-template-columns: 1fr 1fr;
     column-gap: 0.5rem;
     
-    // .active {
-    //   // background: var(--clr-black);
-    //   // color: var(--clr-white);
-    // }
+    .active {
+      border-right: 1px solid #6466f1;
+      border-left: 1px solid #6466f1;
+    }
 `;
 
 
