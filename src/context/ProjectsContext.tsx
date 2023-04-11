@@ -1,6 +1,6 @@
 import { useState, createContext, Dispatch, SetStateAction, useContext } from 'react';
 import { projects as myProjects } from '../data';
-import { IProject } from '../data/projects';
+import { IProject } from '../types/project.types';
 
 interface IProjectsContext {
   projects: IProject[];

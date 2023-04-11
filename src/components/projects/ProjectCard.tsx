@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { IProject } from '../../data/projects';
+import { IProject } from '../../types/project.types';
 
 interface ProjectCardProps extends IProject { };
 

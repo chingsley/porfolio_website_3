@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Img from '../img/Img';
-import { IProject } from '../../data/projects';
+import { IProject } from '../../types/project.types';
 import Button from '../reusable/Button';
 
 interface IProjectsLIstProps {
