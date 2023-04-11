@@ -1,4 +1,4 @@
-import { IProject } from '../../data/projects';
+import { IProject } from '../../types/project.types';
 import ProjectCard from './ProjectCard';
 
 interface IProjectsGridProps {

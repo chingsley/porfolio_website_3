@@ -5,7 +5,7 @@ import { useSettingsContext } from '../../context/SettingsContext';
 
 const ViewTypeSwitcher = () => {
   const settingsContext = useSettingsContext();
-  if (!settingsContext) return <div>Loading...</div>;
+  if (!settingsContext) return <div className="loading">Loading...</div>;
 
   const { viewType, setViewType } = settingsContext;
   const dClass = 'hidden sm:block bg-primary-light dark:bg-ternary-dark p-2.5 shadow-sm rounded-xl cursor-pointer';

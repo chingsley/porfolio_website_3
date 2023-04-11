@@ -7,10 +7,8 @@ import { useSettingsContext } from '../context/SettingsContext';
 const Projects = () => {
   const projectsContext = useProjectsContext();
   const settingsContext = useSettingsContext();
-
-  console.log(projectsContext);
-  if (!projectsContext) return <div>Loading...</div>;
-  if (!settingsContext) return <div>Loading...</div>;
+  if (!projectsContext) return <div className="loading">Loading...</div>;
+  if (!settingsContext) return <div className="loading">Loading...</div>;
 
   const {
     projects,

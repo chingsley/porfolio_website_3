@@ -6,7 +6,7 @@ import { useProjectsContext } from "../context/ProjectsContext";
 const Home = () => {
   const projectsContext = useProjectsContext()!;
   if (!projectsContext) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
   const { projects } = projectsContext;
 
