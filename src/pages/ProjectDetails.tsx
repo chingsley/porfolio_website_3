@@ -11,6 +11,8 @@ const ProjectDetails = () => {
 
   const { projects } = projectsContext;
   const selectedProject = projects.find(p => p.id === Number(id));
+
+  if (!selectedProject) return <div className="not-found">Not Found</div>;
   console.log('selectedProject = ', selectedProject);
   return (
     <motion.div
@@ -23,9 +25,9 @@ const ProjectDetails = () => {
       }}
       className="container mx-auto mt-5 sm:mt-10"
     >
-      <ProjectHeader />
-      <ProjectGallery />
-      <ProjectInfo />
+      <ProjectHeader header={selectedProject.projectHeader} />
+      <ProjectGallery projectImages={selectedProject.images} />
+      <ProjectInfo projectInfo={selectedProject.projectInfo} />
       <ProjectRelatedProjects />
     </motion.div>
   );
