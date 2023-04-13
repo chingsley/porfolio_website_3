@@ -9,7 +9,7 @@ interface ISettingsContext {
 const SettingsContext = createContext<ISettingsContext | null>(null);
 
 const SettingsProvider = (props: { children: React.ReactNode; }) => {
-  const [viewType, setViewType] = useState<ViewType>('list');
+  const [viewType, setViewType] = useState<ViewType>('grid');
 
   return (
     <SettingsContext.Provider

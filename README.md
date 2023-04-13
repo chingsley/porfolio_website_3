@@ -2,11 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## To Start the project
 
-In the project directory, you can run:
+- Open a terminal in the project root directory and run the command `npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch`
 
-### `npm start`
+- Open a 2nd terminal (still in the project root), and run `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
