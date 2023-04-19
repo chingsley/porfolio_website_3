@@ -11,6 +11,7 @@ const ProjectDetails = () => {
 
   const { projects } = projectsContext;
   const selectedProject = projects.find(p => p.id === Number(id));
+  const otherProjects = projects.filter(p => p.id !== Number(id));
 
   if (!selectedProject) return <div className="not-found">Not Found</div>;
   console.log('selectedProject = ', selectedProject);
@@ -28,7 +29,7 @@ const ProjectDetails = () => {
       <ProjectHeader header={selectedProject.projectHeader} />
       <ProjectGallery projectImages={selectedProject.images} />
       <ProjectInfo projectInfo={selectedProject.projectInfo} />
-      <ProjectRelatedProjects />
+      <ProjectRelatedProjects projects={otherProjects.slice(0, 3)} />
     </motion.div>
   );
 };
