@@ -1249,3 +1249,8 @@ video {
   width: 20rem;
   height: 20rem;
 }
+
+.custom-band {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
